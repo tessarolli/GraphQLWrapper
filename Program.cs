@@ -5,11 +5,11 @@ using System;
 var builder = WebApplication.CreateBuilder(args);
 {
 
-    builder.Services.AddHttpClient("StarWars", c => c.BaseAddress = new Uri("https://rickandmortyapi.com/graphql"));
+    builder.Services.AddHttpClient("RickAndMorty", c => c.BaseAddress = new Uri("https://rickandmortyapi.com/graphql"));
 
     builder.Services
         .AddGraphQLServer()
-        .AddRemoteSchema("StarWars");
+        .AddRemoteSchema("RickAndMorty");
 }
 
 var app = builder.Build();
